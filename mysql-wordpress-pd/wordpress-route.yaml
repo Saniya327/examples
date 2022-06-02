@@ -1,0 +1,16 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  labels:
+    app: wordpress
+  name: wordpress
+  namespace: wordpress
+spec:
+        #  host: wordpress-wordpress-acm.apps.perf1.chris.ocs.ninja
+  port:
+    targetPort: 80
+  to:
+    kind: Service
+    name: wordpress
+    weight: 100
+  wildcardPolicy: None

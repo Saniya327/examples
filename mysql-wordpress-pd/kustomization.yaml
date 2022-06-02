@@ -3,5 +3,7 @@ secretGenerator:
   literals:
   - password=MYSQL_PASS
 resources:
+  - clusterrolebinding-default.yaml     
   - mysql-deployment.yaml
   - wordpress-deployment.yaml
+  - wordpress-route.yaml
